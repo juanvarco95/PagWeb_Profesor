@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Becerra Education</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'gestionWeb/css/bootstrap.css' %}" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="{% static 'gestionWeb/css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'gestionWeb/css/responsive.css' %}" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="">
+            
+              <h3><span>Becerra</span></h3>
+            <h3>
+             Education
+            </h3>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+            <ul class="navbar-nav  ml-auto">
+              <li  {%if request.path == "/" %} class="nav-item active"{% else %} class ="nav-item" {% endif %}>
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li {%if request.path == "/math_topics/" %} class="nav-item active" {% else %} class ="nav-item" {% endif %} >
+                <a class="nav-link" href="/math_topics/"> Math Topics </a>
+              </li>
+              <li {%if request.path == "/computer_topic/" %} class="nav-item active" {% else %} class ="nav-item" {% endif %}>
+                <a class="nav-link" href="/computer_topic/"> Computer Topic </a>
+              </li>
+              <li{%if request.path == "/teacher_topic/" %} class="nav-item active" {% else %} class ="nav-item" {% endif %}>
+                <a class="nav-link" href="/teacher_topic/"> Teacher Certification Topic </a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link" href="/admin/">Login</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+              <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+     {% block content  %}
+     {% endblock  %} 
+
+     <!-- footer section -->
+  <footer class="container-fluid footer_section">
+    <p>
+      &copy; 2021 All Rights Reserved By
+      <a href="https://html.design/">Free Html Templates</a>
+    </p>
+  
+  </footer>
+
+   
+  <footer class="container-fluid footer_section">
+  
+      <p>
+        Distributed By 
+        <a href="https://themewagon.com/">Themewagon</a>
+      </p>
+  
+  </footer>
+ 
+  <!-- footer section -->
+
+  <script type="text/javascript" src="{% static 'gestionWeb/js/jquery-3.4.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'gestionWeb/js/bootstrap.js' %}"></script>
+
+</body>
+
+</html>
