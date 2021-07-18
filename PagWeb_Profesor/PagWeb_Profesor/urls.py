@@ -27,4 +27,5 @@ urlpatterns = [
     path('math_topics/', include('MathTopics.urls')),
     path('computer_topic/', include('ComputerTopic.urls')),
     path('teacher_topic/', include('TeacherTopic.urls')),
+    path('Math_Spanish_Teacher', include('MathComputerSTeacher.urls'))
 ]

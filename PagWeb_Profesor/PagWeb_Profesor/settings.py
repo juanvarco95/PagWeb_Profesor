@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'ComputerTopic',
     'TeacherTopic',
     'rest_framework',
+    'MathComputerSTeacher'
     
 ]
 
