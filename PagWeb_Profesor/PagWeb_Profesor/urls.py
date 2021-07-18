@@ -22,7 +22,7 @@ from django.urls.converters import IntConverter
 
 
 urlpatterns = [
-    path('', include('gestionWeb.urls')),
+    path('', include('gestionUsers.urls')),
     path('admin/', admin.site.urls),
     path('math_topics/', include('MathTopics.urls')),
     path('computer_topic/', include('ComputerTopic.urls')),
